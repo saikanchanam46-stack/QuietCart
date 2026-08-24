@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QuietCart — Support through every aisle.</title>
+<meta name="description" content="QuietCart is a sensory-friendly attachment for an ordinary shopping cart. It adds a visual shopping board, CalmCue cards, and quiet tactile supports for children with sensory sensitivities.">
+<meta name="theme-color" content="#FBFAF6">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="QuietCart — Support through every aisle.">
+<meta property="og:description" content="A sensory-friendly attachment that adds visual and tactile support to the shopping cart families are already using.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <g id="i-light" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/>
+  </g>
+  <g id="i-sound" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 9.5h3.2L12 5.6v12.8L7.2 14.5H4z"/><path d="M15.4 9.2a4 4 0 0 1 0 5.6M18.2 6.6a8 8 0 0 1 0 10.8"/>
+  </g>
+  <g id="i-people" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="9" cy="8" r="3"/><path d="M3.4 19.4a5.8 5.8 0 0 1 11.2 0"/><path d="M16.2 6.4a3 3 0 0 1 0 5.4M17.6 14.6a5.8 5.8 0 0 1 3.2 4.8"/>
+  </g>
+  <g id="i-clock" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.6"/><path d="M12 7v5.3l3.4 2"/>
+  </g>
+  <g id="i-check" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 12.4l4.6 4.6L19.5 6.6"/>
+  </g>
+  <g id="i-info" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.6"/><path d="M12 11.2v5.2"/><path d="M12 7.9v.1"/>
+  </g>
+  <g id="i-leaf" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 19c-2-7 2.5-13 14-13.6C19.6 17 13 21 5 19z"/><path d="M5 19c3-5.4 6.2-8.2 10.6-10.2"/>
+  </g>
+  <g id="i-tool" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.4 6.6a3.8 3.8 0 0 0 4.9 4.9l-8 8a2.6 2.6 0 0 1-3.7-3.7z"/><path d="M17.2 3.8l3 3"/>
+  </g>
+  <g id="i-bag" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.6 8h14.8l-1.2 11.4H5.8z"/><path d="M8.8 8V6.4a3.2 3.2 0 0 1 6.4 0V8"/>
+  </g>
+  <g id="i-sliders" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 4.6v6M5 15.2v4.2M12 4.6v10M12 18.4v1M19 4.6v3M19 11.8v7.6"/>
+    <circle cx="5" cy="12.9" r="2.1"/><circle cx="12" cy="16.4" r="2.1"/><circle cx="19" cy="9.6" r="2.1"/>
+  </g>
+  <g id="i-heart" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19.6S3.8 14.7 3.8 9.4a4.2 4.2 0 0 1 8.2-1.4 4.2 4.2 0 0 1 8.2 1.4c0 5.3-8.2 10.2-8.2 10.2z"/>
+  </g>
+  <g id="i-arrow" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 12h14M13 6.5l5.5 5.5L13 17.5"/>
+  </g>
+</defs></svg>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="#5F7F66" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2.6 4.4h2l2.4 8.4h9.3"/><path d="M5.7 7h13.9l-1.7 5.8H7.3"/>
+            <circle cx="9.4" cy="18.4" r="1.5"/><circle cx="16.2" cy="18.4" r="1.5"/>
+          </g>
+          <rect x="13.6" y="1.6" width="8" height="5.6" rx="1.5" fill="#5F7F66"/>
+        </svg>
+        <span class="brand__name">QuietCart</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false"
+              aria-controls="navLinks" aria-label="Menu"><span aria-hidden="true"></span></button>
+
+      <div class="nav__links" id="navLinks">
+        <a href="#how">How It Works</a>
+        <a href="#story">Our Story</a>
+        <a href="#families">For Families</a>
+        <a href="#retailers">For Retailers</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn--ghost btn--sm nav__cta" href="#pricing">Get QuietCart</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= hero ================= -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div>
+          <h1>Shopping should be for everyone.</h1>
+          <p class="hero__lead">QuietCart adds simple sensory and visual support to the shopping cart, helping
+            families navigate overwhelming retail environments with greater comfort and confidence.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="#how">See How It Works</a>
+            <a class="btn btn--ghost" href="#retailers">Partner With Us</a>
+          </div>
+          <p class="hero__note">Designed by a student founder. Built with families in mind.</p>
+        </div>
+        <div class="frame">
+          <img src="assets/img/aisle-hero.svg" width="1200" height="900" alt="A supermarket aisle lined with stocked shelves, seen from behind a shopping cart.">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= the problem ================= -->
+  <section class="section section--tint" id="problem">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The problem</p>
+        <h2>For some families, a simple shopping trip isn&rsquo;t simple.</h2>
+        <p class="lead">A grocery store asks a great deal of a nervous system. Lights glare, announcements cut
+          across the music, freezers roar, aisles fill and empty without warning, and the checkout line moves at
+          a pace nobody can predict.</p>
+      </div>
+
+      <div class="split reveal">
+        <div>
+          <ul class="trip-list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-light"></use></svg>
+              <div><strong>Bright, constant lighting</strong>
+                <span>Overhead fluorescents, glare off freezer doors, and nowhere quiet to step aside.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sound"></use></svg>
+              <div><strong>Layered, unpredictable noise</strong>
+                <span>Announcements, music, scanners, and the rattle of the cart itself, all at once.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-people"></use></svg>
+              <div><strong>Crowded, changing aisles</strong>
+                <span>Aisles fill and clear without warning, and the route is different in every store.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"></use></svg>
+              <div><strong>Waiting with no end in sight</strong>
+                <span>A checkout line is hard to explain to a child halfway through a difficult trip.</span></div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="frame frame--flat">
+            <img src="assets/img/aisle-quiet.svg" width="1200" height="900" alt="A long supermarket aisle with stocked shelves receding toward the back of the store.">
+          </div>
+          <p class="caption">The environment isn&rsquo;t going to change. The support a child brings into it can.</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top: clamp(2.5rem, 4vw, 3.25rem)">
+        <p class="statement">Families shouldn&rsquo;t have to choose between getting groceries and keeping their
+          child comfortable.</p>
+      </div>
+
+      <!-- Placeholders on purpose: we would rather leave a figure blank than invent one.
+           Replace the contents of each .data-slot with a real, citable statistic. -->
+      <div class="data-panel reveal">
+        <div class="data-panel__head">
+          <h3>Numbers we&rsquo;re still sourcing</h3>
+          <p>We&rsquo;d rather leave these blank than guess at them.</p>
+        </div>
+        <div class="data-grid">
+          <div class="data-slot">
+            <span class="data-slot__tag">Placeholder</span>
+            <strong>Children with sensory processing differences</strong>
+            <span>A citable prevalence figure goes here.</span>
+          </div>
+          <div class="data-slot">
+            <span class="data-slot__tag">Placeholder</span>
+            <strong>Shopping trips cut short by sensory overwhelm</strong>
+            <span>To be added from published research or our own interview data.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= the solution ================= -->
+  <section class="section" id="product">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The product</p>
+        <h2>Meet QuietCart.</h2>
+        <p class="lead">QuietCart is a padded attachment that straps onto a shopping cart a family is already
+          pushing. It holds a visual shopping board, a set of CalmCue cards, and a few quiet tactile features,
+          all within a child&rsquo;s reach and line of sight.</p>
+        <div class="note">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-info"></use></svg>
+          <p><strong>QuietCart is an attachment, not a cart.</strong> It does not replace the store&rsquo;s
+            shopping carts and asks nothing of them &mdash; no modification, no power, no app, no screen. It goes
+            on at the start of a trip and comes off at the end.</p>
+        </div>
+      </div>
+
+      <div class="frame frame--diagram reveal" style="background:#FBFAF6">
+        <!-- TODO: swap for a photograph of the real prototype on a cart once one is available. -->
+        <img src="assets/img/product-on-cart.svg" width="752" height="412" alt="A shopping cart seen from the side with the QuietCart board strapped to its push handle, facing the child seat.">
+      </div>
+      <p class="caption caption--center reveal">QuietCart straps to the push handle, where a child in the seat can see and reach
+        it. The cart underneath is unchanged.</p>
+
+      <div class="grid grid--3 reveal" style="margin-top: clamp(2.5rem, 4.5vw, 3.5rem)">
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/detail-sequence.svg" width="520" height="296" alt="Four picture cards on a velcro rail reading produce, dairy, checkout and home, joined by arrows.">
+          </div>
+          <div class="card__body">
+            <h3>Visual Shopping Board</h3>
+            <p>A simple visual sequence helps children understand what comes next during the shopping trip.</p>
+            <div class="chip-row">
+              <span class="chip">Produce</span><span class="sep">&rarr;</span>
+              <span class="chip">Dairy</span><span class="sep">&rarr;</span>
+              <span class="chip">Checkout</span><span class="sep">&rarr;</span>
+              <span class="chip">Home</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/detail-calmcue.svg" width="520" height="296" alt="Three cards on binder rings labelled breathe, feelings and quiet.">
+          </div>
+          <div class="card__body">
+            <h3>CalmCue Cards</h3>
+            <p>Simple breathing prompts, emotion visuals, and coping reminders that can be used when a child
+              starts feeling overwhelmed.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/detail-sensory.svg" width="520" height="296" alt="A soft quilted squeeze pad beside a ribbed strip and a strip of raised dots.">
+          </div>
+          <div class="card__body">
+            <h3>Quiet Sensory Tools</h3>
+            <p>Tactile strips and soft squeeze pads provide quiet sensory input without creating additional
+              noise or distraction.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= how it works ================= -->
+  <section class="section section--tint" id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>Three steps, at the front of the store.</h2>
+        <p class="lead">Nothing to set up in advance, nothing to charge, and nothing left behind on the cart when
+          you&rsquo;re done.</p>
+      </div>
+
+      <div class="steps reveal">
+        <div class="step">
+          <div class="step__media"><img src="assets/img/step-attach.svg" width="420" height="280" alt="A board being strapped onto a cart handle bar with two buckle straps."></div>
+          <p class="step__num">01</p>
+          <h3>Attach</h3>
+          <p>QuietCart securely attaches to an existing shopping cart. Two straps go around the handle, and the
+            board sits where a child in the seat can reach it.</p>
+        </div>
+        <div class="step">
+          <div class="step__media"><img src="assets/img/step-customize.svg" width="420" height="280" alt="A board with picture cards and pads, with one card being moved into an empty slot."></div>
+          <p class="step__num">02</p>
+          <h3>Customize</h3>
+          <p>Families can arrange the visual and sensory tools based on what works best for their child &mdash;
+            today&rsquo;s aisles on the board, the cards that help, the textures that don&rsquo;t.</p>
+        </div>
+        <div class="step">
+          <div class="step__media"><img src="assets/img/step-shop.svg" width="420" height="280" alt="A shopping cart in motion with the QuietCart board attached at the handle."></div>
+          <p class="step__num">03</p>
+          <h3>Shop</h3>
+          <p>Children have familiar visual and sensory supports available throughout the shopping trip, and
+            parents can keep shopping the way they normally would.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= why quietcart ================= -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Why QuietCart</p>
+        <h2>Support without making a scene.</h2>
+        <p class="lead">A support that draws attention isn&rsquo;t much of a support. QuietCart is built to be
+          unremarkable in a store &mdash; close at hand for the child, and barely noticeable to anyone else.</p>
+      </div>
+
+      <div class="why-grid reveal">
+        <div class="why-item">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-leaf"></use></svg>Discreet</h3>
+          <p>Designed to blend into a normal shopping trip, in muted colours and at the size of a placemat.</p>
+        </div>
+        <div class="why-item">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tool"></use></svg>Practical</h3>
+          <p>Uses simple physical tools instead of unnecessary technology. Nothing to charge, update, or lose.</p>
+        </div>
+        <div class="why-item">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bag"></use></svg>Portable</h3>
+          <p>Can be attached when needed and removed afterward, then folded into a bag until the next trip.</p>
+        </div>
+        <div class="why-item">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sliders"></use></svg>Customizable</h3>
+          <p>Different children benefit from different sensory and visual supports, so every piece moves.</p>
+        </div>
+        <div class="why-item">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"></use></svg>Family-focused</h3>
+          <p>Designed around the actual experience of children and caregivers, not around an idea of one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= our story ================= -->
+  <section class="section section--paper3" id="story">
+    <div class="wrap">
+      <div class="split split--text-first reveal">
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2>Built by a student. Shaped by families.</h2>
+          <div class="measure">
+            <p>QuietCart began with a high school student, an interest in accessibility and product design, and
+              a question without a good answer: why is one of the most ordinary errands there is so much harder
+              for some families than for others?</p>
+            <p>The answer came from listening. More than 50 families have been interviewed about what actually
+              happens on a shopping trip &mdash; what helps, what gets packed in a bag and never used, and what
+              makes a parent decide to leave the cart and go home. Those conversations shaped everything: the
+              size of the board, the order of the cards, and the decision to keep the whole thing quiet and
+              screen-free.</p>
+            <p>Three prototypes have been built so far, each one revised after families used it. QuietCart has
+              also begun conversations with Frisco Fresh Market about a potential 2027 pilot partnership.
+              Nothing has been signed and no pilot has run yet &mdash; but the door is open, and that is where
+              the next round of testing would begin.</p>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="stat__num">50+</div><div class="stat__label">families interviewed</div></div>
+            <div class="stat"><div class="stat__num">3</div><div class="stat__label">prototypes built</div></div>
+            <div class="stat"><div class="stat__num">2027</div><div class="stat__label">target year for a potential pilot</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="frame frame--flat">
+            <!-- TODO: replace with a photograph of the actual prototype when one is available. -->
+            <img src="assets/img/prototype-bench.svg" width="900" height="512" alt="A padded prototype board with picture cards, a squeeze pad and textured strips on a cutting mat, with fabric swatches, a sketchbook and scissors nearby.">
+          </div>
+          <p class="caption">The third prototype, mid-revision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= product development ================= -->
+  <section class="section" id="development">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Product development</p>
+        <h2>Where QuietCart is right now.</h2>
+        <p class="lead">A short history, honestly told. QuietCart is a working prototype in active development,
+          not a finished product on a shelf.</p>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="tl-item tl-item--done">
+          <h3>Idea</h3>
+          <p>A question about why an ordinary errand is so much harder for some families.</p>
+          <span class="tl-item__status">Complete</span>
+        </div>
+        <div class="tl-item tl-item--done">
+          <h3>Family Interviews</h3>
+          <p>More than 50 conversations with parents and caregivers about real trips.</p>
+          <span class="tl-item__status">Complete</span>
+        </div>
+        <div class="tl-item tl-item--done">
+          <h3>Prototype 1</h3>
+          <p>Cardboard, velcro and tape &mdash; enough to test size, height and placement.</p>
+          <span class="tl-item__status">Complete</span>
+        </div>
+        <div class="tl-item tl-item--done">
+          <h3>Prototype 2</h3>
+          <p>Padded and washable, reworked around how children actually reach and grab.</p>
+          <span class="tl-item__status">Complete</span>
+        </div>
+        <div class="tl-item tl-item--now">
+          <h3>Prototype 3</h3>
+          <p>The current build: sturdier straps, clearer cards, quieter materials.</p>
+          <span class="tl-item__status">In progress</span>
+        </div>
+        <div class="tl-item">
+          <h3>Retail Testing</h3>
+          <p>In-store testing with a retail partner. Not yet scheduled.</p>
+          <span class="tl-item__status">Planned</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= for retailers ================= -->
+  <section class="section retail" id="retailers">
+    <div class="wrap">
+      <div class="retail__grid">
+        <div class="reveal">
+          <p class="eyebrow">For retailers</p>
+          <h2>Make your store more accessible.</h2>
+          <p class="measure">QuietCart could let a store offer families an additional sensory-friendly resource
+            without replacing a single cart. Nothing about your fleet, your maintenance routine, or your floor
+            plan has to change &mdash; a store keeps a few attachments at the front and offers one to families
+            who would like it.</p>
+          <p class="measure">For stores already thinking about accessibility, it is a small and physical place
+            to start.</p>
+          <ul class="retail__list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span><strong>Sensory-friendly shopping programs</strong> &mdash; a concrete tool to offer, not just a policy.</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span><strong>Retail accessibility initiatives</strong> &mdash; a visible, low-cost addition to existing commitments.</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span><strong>Quiet shopping hours</strong> &mdash; support that carries through the aisles, not just the sound system.</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span><strong>Family support programs</strong> &mdash; something practical to hand a caregiver at the door.</span></li>
+          </ul>
+        </div>
+
+        <div class="retail__panel reveal">
+          <h3>Interested in testing QuietCart at your store?</h3>
+          <p>We are looking for a small number of stores willing to try a handful of attachments and tell us
+            honestly what works and what does not.</p>
+          <p style="margin-top:1.4rem">
+            <a class="btn btn--light" data-audience="retailer" href="#contact">Explore a Partnership</a>
+          </p>
+          <p class="retail__fine">Frisco Fresh Market is currently open to discussing a potential 2027 pilot.
+            That conversation is early, nothing has been agreed, and we would rather say so plainly than imply
+            otherwise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= for families ================= -->
+  <section class="section" id="families">
+    <div class="wrap">
+      <div class="split reveal">
+        <div>
+          <p class="eyebrow">For families</p>
+          <h2>A little more support can make a big difference.</h2>
+          <div class="measure">
+            <p>QuietCart is designed to give families another option when shopping becomes overwhelming. It
+              gives a child something predictable to look at, something quiet to hold, and a way to see what is
+              coming next &mdash; and it gives a parent one thing to reach for instead of four.</p>
+            <p>Every child is different. What settles one child does nothing for another, and the same child may
+              need something different on a Tuesday than on a Saturday. QuietCart is built to be rearranged,
+              ignored, or taken off entirely.</p>
+          </div>
+          <div class="note">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-info"></use></svg>
+            <p>QuietCart is a practical support tool, not a treatment or a therapy. It is not a substitute for
+              professional guidance or for the individual strategies you and your child&rsquo;s care team have
+              worked out together.</p>
+          </div>
+        </div>
+        <div>
+          <div class="frame frame--flat">
+            <img src="assets/img/product-board.svg" width="1000" height="690" alt="The QuietCart attachment: a padded board with a four-step visual shopping sequence, CalmCue cards on a ring, a squeeze pad and textured strips.">
+          </div>
+          <p class="caption">Every QuietCart includes the board, the card set, and the quiet sensory pieces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= pricing ================= -->
+  <section class="section section--tint" id="pricing">
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center; margin-inline:auto">
+        <p class="eyebrow">Pricing</p>
+        <h2>One purchase. No monthly subscription.</h2>
+        <p class="lead" style="margin-inline:auto">Everything a family needs comes in the box. There is no
+          upgrade, no refill plan, and nothing to sign up for.</p>
+      </div>
+
+      <div class="price-card reveal">
+        <div class="price-card__name">QuietCart</div>
+        <div class="price-card__amount"><span>$70</span><span>One-time purchase</span></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg><span>QuietCart attachment</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg><span>Visual Shopping Board</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg><span>CalmCue Cards</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg><span>Quiet sensory attachments</span></li>
+        </ul>
+        <a class="btn btn--primary" href="#contact">Get QuietCart</a>
+        <p class="price-card__fine">QuietCart is still in prototype. Get in touch and we will let you know the
+          moment it is available.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= contact ================= -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact__grid">
+        <div class="reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let&rsquo;s make everyday shopping more accessible.</h2>
+          <p>Whether you have a child who might use QuietCart or a store that might carry it, we would like to
+            hear from you. Tell us which you are:</p>
+
+          <div class="audience">
+            <input type="radio" id="aud-parent" name="audience" value="Parent / caregiver" checked>
+            <label for="aud-parent">
+              <strong>I&rsquo;m a Parent / Caregiver</strong>
+              <span>Questions, feedback, or interest in trying QuietCart.</span>
+            </label>
+
+            <input type="radio" id="aud-retailer" name="audience" value="Retailer / organization">
+            <label for="aud-retailer">
+              <strong>I&rsquo;m a Retailer / Organization</strong>
+              <span>Pilots, accessibility programs, and partnerships.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <!-- The form is not wired to an inbox yet. Set data-endpoint to a form handler
+               (Formspree, Netlify Forms, your own endpoint) to start receiving messages. -->
+          <form class="form" id="contactForm" data-endpoint="" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+              <p class="field__error" id="name-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <p class="field__error" id="email-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="organization">Organization <span class="opt">(optional)</span></label>
+              <input type="text" id="organization" name="organization" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+              <p class="field__error" id="message-error" aria-live="polite"></p>
+            </div>
+            <div>
+              <button class="btn btn--primary" type="submit">Send Message</button>
+            </div>
+            <p class="form__status" id="formStatus" role="status" hidden></p>
+            <p class="form__fine">We read everything. Replies usually take a few days &mdash; this is a student
+              project, not a support desk.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="#5F7F66" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.6 4.4h2l2.4 8.4h9.3"/><path d="M5.7 7h13.9l-1.7 5.8H7.3"/>
+              <circle cx="9.4" cy="18.4" r="1.5"/><circle cx="16.2" cy="18.4" r="1.5"/>
+            </g>
+            <rect x="13.6" y="1.6" width="8" height="5.6" rx="1.5" fill="#5F7F66"/>
+          </svg>
+          <span class="brand__name">QuietCart</span>
+        </a>
+        <p class="footer__tag">Support through every aisle.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#families">For Families</a></li>
+          <li><a href="#retailers">For Retailers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <!-- TODO: replace with the real LinkedIn profile URL before launch. -->
+          <li><a href="#" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>&copy; 2026 QuietCart. An independent student project.</span>
+      <span>Support through every aisle.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
