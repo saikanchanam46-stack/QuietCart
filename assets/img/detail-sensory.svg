@@ -2,34 +2,34 @@
 <title id="pt">Quiet sensory features</title><desc id="pd">A soft quilted squeeze pad beside a ribbed strip and a textured strip of raised dots.</desc>
 <defs>
   <pattern id="velcro" width="8" height="8" patternUnits="userSpaceOnUse">
-    <rect width="8" height="8" fill="#CBC7BE"/>
-    <path d="M0 8L8 0M-2 2L2 -2M6 10L10 6" stroke="#B8B4AA" stroke-width="1.4"/>
+    <rect width="8" height="8" fill="#C2C7C4"/>
+    <path d="M0 8L8 0M-2 2L2 -2M6 10L10 6" stroke="#ADB5B1" stroke-width="1.4"/>
   </pattern>
   <pattern id="ribs" width="14" height="10" patternUnits="userSpaceOnUse">
-    <rect width="14" height="10" fill="#B7CFCC"/>
-    <rect width="6" height="10" fill="#BBB5A7"/>
+    <rect width="14" height="10" fill="#D5D8D6"/>
+    <rect width="6" height="10" fill="#ADB5B1"/>
   </pattern>
   <pattern id="bumps" width="18" height="18" patternUnits="userSpaceOnUse">
-    <rect width="18" height="18" fill="#D9D5CD"/>
-    <circle cx="5" cy="5" r="3.1" fill="#A9C6C1"/>
-    <circle cx="14" cy="14" r="3.1" fill="#A9C6C1"/>
+    <rect width="18" height="18" fill="#D1D5D3"/>
+    <circle cx="5" cy="5" r="3.1" fill="#C4C9C6"/>
+    <circle cx="14" cy="14" r="3.1" fill="#C4C9C6"/>
   </pattern>
   <pattern id="quilt" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
     <rect width="26" height="26" fill="none"/>
-    <path d="M0 0h26M0 0v26" stroke="#B7B1A2" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <path d="M0 0h26M0 0v26" stroke="#A9B0AC" stroke-width="1.5" stroke-dasharray="4 4"/>
   </pattern>
   <linearGradient id="padlight" x1="0" y1="0" x2="0.3" y2="1">
     <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.45"/>
     <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
   </linearGradient>
   <filter id="soft" x="-25%" y="-25%" width="150%" height="160%">
-    <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#403E38" flood-opacity="0.16"/>
+    <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#393F3C" flood-opacity="0.16"/>
   </filter>
   <filter id="soft-sm" x="-30%" y="-30%" width="160%" height="170%">
-    <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#403E38" flood-opacity="0.14"/>
+    <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#393F3C" flood-opacity="0.14"/>
   </filter></defs>
-<rect width="520" height="296" fill="#F5F4F2"/>
-<g filter="url(#soft-sm)"><rect x="40" y="66" width="188" height="188" rx="42" fill="#B9D2CE"/><rect x="40" y="66" width="188" height="188" rx="42" fill="url(#quilt)"/><rect x="40" y="66" width="188" height="188" rx="42" fill="url(#padlight)"/><rect x="40" y="66" width="188" height="188" rx="42" fill="none" stroke="#ACA493" stroke-width="2.6"/></g>
-<g transform="translate(88,106) scale(0.9200)" fill="none" stroke="#4F6A55" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"><path d="M36 62V34a5 5 0 0 1 10 0v22"/><path d="M46 54V30a5 5 0 0 1 10 0v26"/><path d="M56 56V36a5 5 0 0 1 10 0v28"/><path d="M36 56c-8 2-10 8-6 14l10 16h26c4-8 6-14 6-22"/></g>
-<g filter="url(#soft-sm)"><rect x="266" y="66" width="212" height="84" rx="18" fill="url(#ribs)" stroke="#ACA493" stroke-width="2.2"/><rect x="266" y="170" width="212" height="84" rx="18" fill="url(#bumps)" stroke="#ACA493" stroke-width="2.2"/></g>
+<rect width="520" height="296" fill="#F3F4F3"/>
+<g filter="url(#soft-sm)"><rect x="40" y="66" width="188" height="188" rx="42" fill="#AFC5B5"/><rect x="40" y="66" width="188" height="188" rx="42" fill="url(#quilt)"/><rect x="40" y="66" width="188" height="188" rx="42" fill="url(#padlight)"/><rect x="40" y="66" width="188" height="188" rx="42" fill="none" stroke="#9BA4A0" stroke-width="2.6"/></g>
+<g transform="translate(88,106) scale(0.9200)" fill="none" stroke="#24342F" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"><path d="M36 62V34a5 5 0 0 1 10 0v22"/><path d="M46 54V30a5 5 0 0 1 10 0v26"/><path d="M56 56V36a5 5 0 0 1 10 0v28"/><path d="M36 56c-8 2-10 8-6 14l10 16h26c4-8 6-14 6-22"/></g>
+<g filter="url(#soft-sm)"><rect x="266" y="66" width="212" height="84" rx="18" fill="url(#ribs)" stroke="#9BA4A0" stroke-width="2.2"/><rect x="266" y="170" width="212" height="84" rx="18" fill="url(#bumps)" stroke="#9BA4A0" stroke-width="2.2"/></g>
 </svg>

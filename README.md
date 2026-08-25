@@ -141,22 +141,25 @@ worth adding first.
 
 ## Design
 
-Warm and natural rather than clinical. Off-white `#FCFBF8` is the ground, warm cream `#F7F5EF`
-alternates the sections, and very light sage `#E8EEE7` appears sparingly behind cards. Muted olive
-`#7F9A82` carries the primary buttons; a deeper olive `#4F6A55` is the text-safe version for
-eyebrows and links. Soft sage `#A8BFA8` is decorative only — icons, borders, hovers — because it is
-too light to sit under text. Headings are soft charcoal `#26332F`, body copy a muted grey-green.
+Dark green/charcoal `#24342F` is the dominant brand colour. Major sections alternate between white
+and that dark ground, with very light grey `#F7F7F5` as a quieter third step so the page does not
+read as stripes. Light grey `#E5E7EB` carries hairlines on white and body copy on dark. The muted
+green `#AFC5B5` appears only in small doses — eyebrow rules, the leaf in the mark, a single accent
+on the product board.
 
-Every foreground/background pair in the palette meets WCAG AA. Two are worth knowing about: the
-primary button uses near-black text on olive rather than white, which white would fail at 3.1:1,
-and the button lightens on hover instead of darkening, which keeps that contrast climbing rather
-than dropping.
+Dark bands work by re-pointing the CSS custom properties inside `.section--dark` rather than by
+writing a second set of component rules. A card, border or button inside a dark band picks up the
+inverted values automatically, so the two modes cannot drift apart.
 
-Type is Jost for headings, echoing the geometric wordmark, over Public Sans for body text.
+Buttons follow the ground they sit on: dark fill with white text on light sections, white fill with
+dark text or a white outline on dark ones.
 
-The illustrations are recoloured to match: neutral structure (walls, floors, shelving) sits on warm
-paper tones, while genuinely coloured things (produce, packaging, the workbench) keep their own
-colour, so the scenes still read as real places.
+Every foreground/background pair in the palette meets WCAG AA, on both grounds.
+
+Type is Jost for headings over Public Sans for body text.
+
+The illustrations are recoloured to match: neutral structure sits on near-neutral greys, while
+produce, packaging and the workbench keep their real colour so the scenes still read as places.
 
 ## Copy rules
 
