@@ -2,32 +2,32 @@
 <title id="pt">Attaching the board</title><desc id="pd">A board being strapped onto a cart handle bar with two buckle straps.</desc>
 <defs>
   <pattern id="velcro" width="8" height="8" patternUnits="userSpaceOnUse">
-    <rect width="8" height="8" fill="#C3CBBE"/>
-    <path d="M0 8L8 0M-2 2L2 -2M6 10L10 6" stroke="#AFB8AA" stroke-width="1.4"/>
+    <rect width="8" height="8" fill="#BEC8CB"/>
+    <path d="M0 8L8 0M-2 2L2 -2M6 10L10 6" stroke="#AAB5B8" stroke-width="1.4"/>
   </pattern>
   <pattern id="ribs" width="14" height="10" patternUnits="userSpaceOnUse">
     <rect width="14" height="10" fill="#B7CFCC"/>
-    <rect width="6" height="10" fill="#A2C0BD"/>
+    <rect width="6" height="10" fill="#A5B8BD"/>
   </pattern>
   <pattern id="bumps" width="18" height="18" patternUnits="userSpaceOnUse">
-    <rect width="18" height="18" fill="#CBDBD6"/>
+    <rect width="18" height="18" fill="#CCD7DA"/>
     <circle cx="5" cy="5" r="3.1" fill="#A9C6C1"/>
     <circle cx="14" cy="14" r="3.1" fill="#A9C6C1"/>
   </pattern>
   <pattern id="quilt" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
     <rect width="26" height="26" fill="none"/>
-    <path d="M0 0h26M0 0v26" stroke="#9FBAB6" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <path d="M0 0h26M0 0v26" stroke="#9FB4BA" stroke-width="1.5" stroke-dasharray="4 4"/>
   </pattern>
   <linearGradient id="padlight" x1="0" y1="0" x2="0.3" y2="1">
     <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.45"/>
     <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
   </linearGradient>
   <filter id="soft" x="-25%" y="-25%" width="150%" height="160%">
-    <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#3B4038" flood-opacity="0.16"/>
+    <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#383E40" flood-opacity="0.16"/>
   </filter>
   <filter id="soft-sm" x="-30%" y="-30%" width="160%" height="170%">
-    <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#3B4038" flood-opacity="0.14"/>
+    <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#383E40" flood-opacity="0.14"/>
   </filter></defs>
 
-<g fill="none" stroke="#5E7F63" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M60 96h300" stroke-width="12" stroke="#B9C2BB"/><circle cx="60" cy="96" r="13" stroke="#B9C2BB" stroke-width="8"/><circle cx="360" cy="96" r="13" stroke="#B9C2BB" stroke-width="8"/><rect x="118" y="128" width="188" height="112" rx="14"/><path d="M150 128V78a8 8 0 0 1 8-8h18a8 8 0 0 1 8 8v50"/><path d="M254 128V78a8 8 0 0 1 8-8h18a8 8 0 0 1 8 8v50"/><rect x="146" y="150" width="60" height="42" rx="6" stroke="#9DAF9F"/><rect x="218" y="150" width="60" height="42" rx="6" stroke="#9DAF9F"/><path d="M146 210h132" stroke="#9DAF9F"/></g>
+<g fill="none" stroke="#26616C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M60 96h300" stroke-width="12" stroke="#B9C0C2"/><circle cx="60" cy="96" r="13" stroke="#B9C0C2" stroke-width="8"/><circle cx="360" cy="96" r="13" stroke="#B9C0C2" stroke-width="8"/><rect x="118" y="128" width="188" height="112" rx="14"/><path d="M150 128V78a8 8 0 0 1 8-8h18a8 8 0 0 1 8 8v50"/><path d="M254 128V78a8 8 0 0 1 8-8h18a8 8 0 0 1 8 8v50"/><rect x="146" y="150" width="60" height="42" rx="6" stroke="#94ABB1"/><rect x="218" y="150" width="60" height="42" rx="6" stroke="#94ABB1"/><path d="M146 210h132" stroke="#94ABB1"/></g>
 </svg>

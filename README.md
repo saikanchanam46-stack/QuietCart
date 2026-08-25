@@ -64,12 +64,12 @@ Two things are still unfinished. Both are marked with `TODO` comments in the sou
 
 1. **Add the real LinkedIn URL.** `index.html` → footer, `Elsewhere` list. It points at `#`.
    No other social accounts are listed; don't add one until it exists.
-2. **Add the founder's name** to the byline under the portrait in Our Story. It currently reads
-   just "Founder, QuietCart".
+2. **Check the Our Story copy.** It is written in Sai's first-person voice from the facts supplied
+   so far. Correct anything that is not accurate.
 
-Also worth deciding before launch: the two dashed statistic placeholders in the Problem section.
-They are placeholders on purpose — no figure on this site is invented. Replace each with a real,
-citable number, or delete the `.data-panel` block.
+No figure on this site is invented. The two that appear — 50+ families interviewed, 3 prototypes
+built — come from the project's own research. Any external statistic added later needs a citable
+source.
 
 ## Photographs
 
@@ -79,13 +79,14 @@ Each photo slot ships with an illustration as its actual `src`. On load, the pag
 the matching photo exists and swaps it in if it does. A missing photo simply leaves the
 illustration in place, so the site never shows a broken image and never needs an edit to work.
 
-| Filename | Where it appears | Shape | Suggested size |
-|---|---|---|---|
-| `founder.jpg` | Our Story portrait | portrait 4:5 | 1200 x 1500 |
-| `prototype.jpg` | Product Development | wide 16:9 | 1600 x 900 |
-| `hero-store.jpg` | Hero | landscape 4:3 | 1600 x 1200 |
-| `aisle.jpg` | The Problem | landscape 4:3 | 1600 x 1200 |
-| `family-shopping.jpg` | For Families | landscape 4:3 | 1600 x 1200 |
+| Filename | Where it appears | Shape | Suggested size | Status |
+|---|---|---|---|---|
+| `founder.jpg` | Our Story portrait | portrait 4:5 | 1200 x 1500 | **in place** |
+| `carts.jpg` | For Retailers | portrait 3:4 | 415 x 553 | **in place**, low resolution |
+| `prototype.jpg` | Product Development | wide 16:9 | 1600 x 900 | wanted |
+| `hero-store.jpg` | Hero | landscape 4:3 | 1600 x 1200 | wanted |
+| `aisle.jpg` | The Problem | landscape 4:3 | 1600 x 1200 | wanted |
+| `family-shopping.jpg` | For Families | landscape 4:3 | 1600 x 1200 | wanted |
 
 Photos are cropped to fill their slot (`object-fit: cover`), so any reasonable size works — but
 keep the subject near the middle, and keep files under roughly 400 KB so pages stay quick.
@@ -121,6 +122,17 @@ Every other image is an original SVG built for this site, in the brand palette. 
 so they stay sharp at any size. They are also placeholders in spirit — a real photo of the actual
 prototype will do more for trust than any drawing. `prototype.jpg` and `founder.jpg` are the two
 worth adding first.
+
+## Design
+
+The palette comes from the logo: the teal of the cart line is the primary colour, the sage of the
+leaf is a secondary accent used sparingly. Neutrals carry a slight teal bias so greys sit with the
+brand rather than reading as generic. Type is Jost for headings, echoing the geometric wordmark,
+over Public Sans for body text.
+
+The illustrations were recoloured to match: neutral structure (walls, floors, shelving) shifted
+cool, while genuinely coloured things (produce, packaging, the workbench) kept their own colour, so
+the scenes still read as real places.
 
 ## Copy rules
 

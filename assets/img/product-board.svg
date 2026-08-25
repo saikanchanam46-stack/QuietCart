@@ -2,69 +2,69 @@
 <title id="pt">The QuietCart attachment</title><desc id="pd">A padded board with a four-step visual shopping sequence along the top, CalmCue cards on a binder ring, a soft squeeze pad and two textured strips, with webbing straps and buckles running up behind the board.</desc>
 <defs>
   <pattern id="velcro" width="8" height="8" patternUnits="userSpaceOnUse">
-    <rect width="8" height="8" fill="#C3CBBE"/>
-    <path d="M0 8L8 0M-2 2L2 -2M6 10L10 6" stroke="#AFB8AA" stroke-width="1.4"/>
+    <rect width="8" height="8" fill="#BEC8CB"/>
+    <path d="M0 8L8 0M-2 2L2 -2M6 10L10 6" stroke="#AAB5B8" stroke-width="1.4"/>
   </pattern>
   <pattern id="ribs" width="14" height="10" patternUnits="userSpaceOnUse">
     <rect width="14" height="10" fill="#B7CFCC"/>
-    <rect width="6" height="10" fill="#A2C0BD"/>
+    <rect width="6" height="10" fill="#A5B8BD"/>
   </pattern>
   <pattern id="bumps" width="18" height="18" patternUnits="userSpaceOnUse">
-    <rect width="18" height="18" fill="#CBDBD6"/>
+    <rect width="18" height="18" fill="#CCD7DA"/>
     <circle cx="5" cy="5" r="3.1" fill="#A9C6C1"/>
     <circle cx="14" cy="14" r="3.1" fill="#A9C6C1"/>
   </pattern>
   <pattern id="quilt" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
     <rect width="26" height="26" fill="none"/>
-    <path d="M0 0h26M0 0v26" stroke="#9FBAB6" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <path d="M0 0h26M0 0v26" stroke="#9FB4BA" stroke-width="1.5" stroke-dasharray="4 4"/>
   </pattern>
   <linearGradient id="padlight" x1="0" y1="0" x2="0.3" y2="1">
     <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.45"/>
     <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
   </linearGradient>
   <filter id="soft" x="-25%" y="-25%" width="150%" height="160%">
-    <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#3B4038" flood-opacity="0.16"/>
+    <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#383E40" flood-opacity="0.16"/>
   </filter>
   <filter id="soft-sm" x="-30%" y="-30%" width="160%" height="170%">
-    <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#3B4038" flood-opacity="0.14"/>
+    <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#383E40" flood-opacity="0.14"/>
   </filter></defs>
-<rect width="1000" height="690" fill="#F7F5F0"/>
-<rect x="260" y="28" width="68" height="120" rx="6" fill="#6E7570"/>
-<rect x="266" y="28" width="7" height="120" fill="#828983" opacity="0.65"/>
-<rect x="310" y="28" width="7" height="120" fill="#5C635E" opacity="0.55"/>
-<rect x="251" y="32" width="86" height="26" rx="8" fill="#565D58"/>
-<rect x="288" y="32" width="12" height="26" fill="#40463F"/>
-<rect x="672" y="28" width="68" height="120" rx="6" fill="#6E7570"/>
-<rect x="678" y="28" width="7" height="120" fill="#828983" opacity="0.65"/>
-<rect x="722" y="28" width="7" height="120" fill="#5C635E" opacity="0.55"/>
-<rect x="663" y="32" width="86" height="26" rx="8" fill="#565D58"/>
-<rect x="700" y="32" width="12" height="26" fill="#40463F"/>
+<rect width="1000" height="690" fill="#F2F5F5"/>
+<rect x="260" y="28" width="68" height="120" rx="6" fill="#6E7375"/>
+<rect x="266" y="28" width="7" height="120" fill="#828789" opacity="0.65"/>
+<rect x="310" y="28" width="7" height="120" fill="#5C6163" opacity="0.55"/>
+<rect x="251" y="32" width="86" height="26" rx="8" fill="#565B5D"/>
+<rect x="288" y="32" width="12" height="26" fill="#3F4446"/>
+<rect x="672" y="28" width="68" height="120" rx="6" fill="#6E7375"/>
+<rect x="678" y="28" width="7" height="120" fill="#828789" opacity="0.65"/>
+<rect x="722" y="28" width="7" height="120" fill="#5C6163" opacity="0.55"/>
+<rect x="663" y="32" width="86" height="26" rx="8" fill="#565B5D"/>
+<rect x="700" y="32" width="12" height="26" fill="#3F4446"/>
 <g filter="url(#soft)">
-<rect x="101" y="115" width="816" height="496" rx="26" fill="#CFCCC0"/>
-<rect x="92" y="104" width="816" height="496" rx="26" fill="#F2EFE7"/>
+<rect x="101" y="115" width="816" height="496" rx="26" fill="#C0CCCF"/>
+<rect x="92" y="104" width="816" height="496" rx="26" fill="#F0F4F4"/>
 </g>
-<rect x="92" y="104" width="816" height="496" rx="26" fill="none" stroke="#5E7F63" stroke-width="9"/>
-<rect x="109" y="121" width="782" height="462" rx="15" fill="none" stroke="#CFCABB" stroke-width="1.8" stroke-dasharray="7 6"/>
-<text x="141" y="148" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="1.7" fill="#7B8479">TODAY&#8217;S TRIP</text>
+<rect x="92" y="104" width="816" height="496" rx="26" fill="none" stroke="#26616C" stroke-width="9"/>
+<rect x="109" y="121" width="782" height="462" rx="15" fill="none" stroke="#CFD9DC" stroke-width="1.8" stroke-dasharray="7 6"/>
+<text x="141" y="148" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="1.7" fill="#6B7C81">TODAY&#8217;S TRIP</text>
 <rect x="138" y="162" width="724" height="172" rx="12" fill="url(#velcro)" opacity="0.7"/>
-<g filter="url(#soft-sm)"><rect x="158.0" y="176" width="150" height="144" rx="6" fill="#FCFBF7" stroke="#D9D5C9" stroke-width="1.6"/><g transform="translate(199.88,200.48) scale(0.6624)" fill="none" stroke="#5E7F63" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 30c-9-9-26-8-30 6-5 17 8 40 16 46 6 5 10 2 14 2s8 3 14-2c8-6 21-29 16-46-4-14-21-15-30-6z"/><path d="M50 30V16"/><path d="M50 20c8-6 16-6 20-9-1 8-8 13-14 14"/></g><text x="233.0" y="309" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#39423B" letter-spacing="0.2">Produce</text></g>
-<g stroke="#A9AFA4" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M313.0 248.0h18.0"/><path d="M324.0 242.5l6 5.5-6 5.5"/></g>
-<g filter="url(#soft-sm)"><rect x="336.0" y="176" width="150" height="144" rx="6" fill="#FCFBF7" stroke="#D9D5C9" stroke-width="1.6"/><g transform="translate(377.88,200.48) scale(0.6624)" fill="none" stroke="#5E7F63" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 40h36v46a4 4 0 0 1-4 4H36a4 4 0 0 1-4-4z"/><path d="M32 40l18-16 18 16"/><path d="M41 24h18"/><path d="M41 58h18"/></g><text x="411.0" y="309" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#39423B" letter-spacing="0.2">Dairy</text></g>
-<g stroke="#A9AFA4" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M491.0 248.0h18.0"/><path d="M502.0 242.5l6 5.5-6 5.5"/></g>
-<g filter="url(#soft-sm)"><rect x="514.0" y="176" width="150" height="144" rx="6" fill="#FCFBF7" stroke="#D9D5C9" stroke-width="1.6"/><g transform="translate(555.88,200.48) scale(0.6624)" fill="none" stroke="#5E7F63" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 24h11l12 42h40"/><path d="M31 36h56l-8 24H39"/><circle cx="44" cy="80" r="6"/><circle cx="73" cy="80" r="6"/></g><text x="589.0" y="309" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#39423B" letter-spacing="0.2">Checkout</text></g>
-<g stroke="#A9AFA4" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M669.0 248.0h18.0"/><path d="M680.0 242.5l6 5.5-6 5.5"/></g>
-<g filter="url(#soft-sm)"><rect x="692.0" y="176" width="150" height="144" rx="6" fill="#FCFBF7" stroke="#D9D5C9" stroke-width="1.6"/><g transform="translate(733.88,200.48) scale(0.6624)" fill="none" stroke="#5E7F63" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 50L50 24l30 26"/><path d="M28 46v40h44V46"/><path d="M42 86V64h16v22"/></g><text x="767.0" y="309" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#39423B" letter-spacing="0.2">Home</text></g>
-<text x="141" y="362" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="1.7" fill="#7B8479">CALMCUE CARDS</text>
-<g transform="rotate(-4 194 526)" filter="url(#soft-sm)"><rect x="138" y="376" width="112" height="150" rx="6" fill="#FCFBF7" stroke="#D9D5C9" stroke-width="1.6"/><g transform="translate(168.24,401.5) scale(0.5152)" fill="none" stroke="#3E6E72" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="10"/><path d="M50 26a24 24 0 0 1 0 48" /><path d="M50 26a24 24 0 0 0 0 48"/><path d="M50 14v-2"/><path d="M50 88v2"/></g><text x="194.0" y="515" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#39423B" letter-spacing="0.2">Breathe</text></g>
-<circle cx="194" cy="386" r="11" fill="none" stroke="#9AA29A" stroke-width="4"/>
-<g transform="rotate(0 310 526)" filter="url(#soft-sm)"><rect x="254" y="376" width="112" height="150" rx="6" fill="#FCFBF7" stroke="#D9D5C9" stroke-width="1.6"/><g transform="translate(284.24,401.5) scale(0.5152)" fill="none" stroke="#3E6E72" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="28"/><path d="M40 44v4"/><path d="M60 44v4"/><path d="M38 60c4 6 20 6 24 0"/></g><text x="310.0" y="515" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#39423B" letter-spacing="0.2">Feelings</text></g>
-<circle cx="310" cy="386" r="11" fill="none" stroke="#9AA29A" stroke-width="4"/>
-<g transform="rotate(4 426 526)" filter="url(#soft-sm)"><rect x="370" y="376" width="112" height="150" rx="6" fill="#FCFBF7" stroke="#D9D5C9" stroke-width="1.6"/><g transform="translate(400.24,401.5) scale(0.5152)" fill="none" stroke="#3E6E72" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M26 56V48a24 24 0 0 1 48 0v8"/><path d="M26 54h8a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z"/><path d="M74 54h-8a4 4 0 0 0-4 4v12a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4z"/></g><text x="426.0" y="515" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#39423B" letter-spacing="0.2">Quiet</text></g>
-<circle cx="426" cy="386" r="11" fill="none" stroke="#9AA29A" stroke-width="4"/>
-<g filter="url(#soft-sm)"><rect x="544" y="374" width="146" height="146" rx="34" fill="#B9D2CE"/><rect x="544" y="374" width="146" height="146" rx="34" fill="url(#quilt)"/><rect x="544" y="374" width="146" height="146" rx="34" fill="url(#padlight)"/><rect x="544" y="374" width="146" height="146" rx="34" fill="none" stroke="#8FB0AB" stroke-width="2.4"/></g>
-<g transform="translate(583,408) scale(0.7000)" fill="none" stroke="#3F6B6E" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"><path d="M36 62V34a5 5 0 0 1 10 0v22"/><path d="M46 54V30a5 5 0 0 1 10 0v26"/><path d="M56 56V36a5 5 0 0 1 10 0v28"/><path d="M36 56c-8 2-10 8-6 14l10 16h26c4-8 6-14 6-22"/></g>
-<text x="617" y="546" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#7B8479">Squeeze pad</text>
-<rect x="722" y="374" width="140" height="68" rx="14" fill="url(#ribs)" stroke="#8FB0AB" stroke-width="2"/>
-<rect x="722" y="452" width="140" height="68" rx="14" fill="url(#bumps)" stroke="#8FB0AB" stroke-width="2"/>
-<text x="792" y="546" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#7B8479">Textured strips</text>
+<g filter="url(#soft-sm)"><rect x="158.0" y="176" width="150" height="144" rx="6" fill="#FDFEFE" stroke="#D8E0E2" stroke-width="1.6"/><g transform="translate(199.88,200.48) scale(0.6624)" fill="none" stroke="#26616C" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 30c-9-9-26-8-30 6-5 17 8 40 16 46 6 5 10 2 14 2s8 3 14-2c8-6 21-29 16-46-4-14-21-15-30-6z"/><path d="M50 30V16"/><path d="M50 20c8-6 16-6 20-9-1 8-8 13-14 14"/></g><text x="233.0" y="309" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#16292E" letter-spacing="0.2">Produce</text></g>
+<g stroke="#A4ADAF" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M313.0 248.0h18.0"/><path d="M324.0 242.5l6 5.5-6 5.5"/></g>
+<g filter="url(#soft-sm)"><rect x="336.0" y="176" width="150" height="144" rx="6" fill="#FDFEFE" stroke="#D8E0E2" stroke-width="1.6"/><g transform="translate(377.88,200.48) scale(0.6624)" fill="none" stroke="#26616C" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 40h36v46a4 4 0 0 1-4 4H36a4 4 0 0 1-4-4z"/><path d="M32 40l18-16 18 16"/><path d="M41 24h18"/><path d="M41 58h18"/></g><text x="411.0" y="309" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#16292E" letter-spacing="0.2">Dairy</text></g>
+<g stroke="#A4ADAF" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M491.0 248.0h18.0"/><path d="M502.0 242.5l6 5.5-6 5.5"/></g>
+<g filter="url(#soft-sm)"><rect x="514.0" y="176" width="150" height="144" rx="6" fill="#FDFEFE" stroke="#D8E0E2" stroke-width="1.6"/><g transform="translate(555.88,200.48) scale(0.6624)" fill="none" stroke="#26616C" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 24h11l12 42h40"/><path d="M31 36h56l-8 24H39"/><circle cx="44" cy="80" r="6"/><circle cx="73" cy="80" r="6"/></g><text x="589.0" y="309" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#16292E" letter-spacing="0.2">Checkout</text></g>
+<g stroke="#A4ADAF" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M669.0 248.0h18.0"/><path d="M680.0 242.5l6 5.5-6 5.5"/></g>
+<g filter="url(#soft-sm)"><rect x="692.0" y="176" width="150" height="144" rx="6" fill="#FDFEFE" stroke="#D8E0E2" stroke-width="1.6"/><g transform="translate(733.88,200.48) scale(0.6624)" fill="none" stroke="#26616C" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 50L50 24l30 26"/><path d="M28 46v40h44V46"/><path d="M42 86V64h16v22"/></g><text x="767.0" y="309" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#16292E" letter-spacing="0.2">Home</text></g>
+<text x="141" y="362" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="1.7" fill="#6B7C81">CALMCUE CARDS</text>
+<g transform="rotate(-4 194 526)" filter="url(#soft-sm)"><rect x="138" y="376" width="112" height="150" rx="6" fill="#FDFEFE" stroke="#D8E0E2" stroke-width="1.6"/><g transform="translate(168.24,401.5) scale(0.5152)" fill="none" stroke="#2A6570" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="10"/><path d="M50 26a24 24 0 0 1 0 48" /><path d="M50 26a24 24 0 0 0 0 48"/><path d="M50 14v-2"/><path d="M50 88v2"/></g><text x="194.0" y="515" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#16292E" letter-spacing="0.2">Breathe</text></g>
+<circle cx="194" cy="386" r="11" fill="none" stroke="#9AA0A2" stroke-width="4"/>
+<g transform="rotate(0 310 526)" filter="url(#soft-sm)"><rect x="254" y="376" width="112" height="150" rx="6" fill="#FDFEFE" stroke="#D8E0E2" stroke-width="1.6"/><g transform="translate(284.24,401.5) scale(0.5152)" fill="none" stroke="#2A6570" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="28"/><path d="M40 44v4"/><path d="M60 44v4"/><path d="M38 60c4 6 20 6 24 0"/></g><text x="310.0" y="515" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#16292E" letter-spacing="0.2">Feelings</text></g>
+<circle cx="310" cy="386" r="11" fill="none" stroke="#9AA0A2" stroke-width="4"/>
+<g transform="rotate(4 426 526)" filter="url(#soft-sm)"><rect x="370" y="376" width="112" height="150" rx="6" fill="#FDFEFE" stroke="#D8E0E2" stroke-width="1.6"/><g transform="translate(400.24,401.5) scale(0.5152)" fill="none" stroke="#2A6570" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M26 56V48a24 24 0 0 1 48 0v8"/><path d="M26 54h8a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z"/><path d="M74 54h-8a4 4 0 0 0-4 4v12a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4z"/></g><text x="426.0" y="515" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#16292E" letter-spacing="0.2">Quiet</text></g>
+<circle cx="426" cy="386" r="11" fill="none" stroke="#9AA0A2" stroke-width="4"/>
+<g filter="url(#soft-sm)"><rect x="544" y="374" width="146" height="146" rx="34" fill="#B9D2CE"/><rect x="544" y="374" width="146" height="146" rx="34" fill="url(#quilt)"/><rect x="544" y="374" width="146" height="146" rx="34" fill="url(#padlight)"/><rect x="544" y="374" width="146" height="146" rx="34" fill="none" stroke="#90A8AF" stroke-width="2.4"/></g>
+<g transform="translate(583,408) scale(0.7000)" fill="none" stroke="#2A6570" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"><path d="M36 62V34a5 5 0 0 1 10 0v22"/><path d="M46 54V30a5 5 0 0 1 10 0v26"/><path d="M56 56V36a5 5 0 0 1 10 0v28"/><path d="M36 56c-8 2-10 8-6 14l10 16h26c4-8 6-14 6-22"/></g>
+<text x="617" y="546" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6B7C81">Squeeze pad</text>
+<rect x="722" y="374" width="140" height="68" rx="14" fill="url(#ribs)" stroke="#90A8AF" stroke-width="2"/>
+<rect x="722" y="452" width="140" height="68" rx="14" fill="url(#bumps)" stroke="#90A8AF" stroke-width="2"/>
+<text x="792" y="546" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6B7C81">Textured strips</text>
 </svg>
