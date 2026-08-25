@@ -9,9 +9,9 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <!-- SITE URL: change this one value to your real domain once it is live.
      It is used by the canonical link and by every social preview below. -->
-<link rel="canonical" href="https://quietcart.netlify.app/">
-<meta property="og:url" content="https://quietcart.netlify.app/">
-<meta property="og:image" content="https://quietcart.netlify.app/assets/img/og-card.jpg">
+<link rel="canonical" href="https://quietcart.vercel.app/">
+<meta property="og:url" content="https://quietcart.vercel.app/">
+<meta property="og:image" content="https://quietcart.vercel.app/assets/img/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="QuietCart — shopping should be for everyone.">
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="QuietCart — Support through every aisle.">
 <meta name="twitter:description" content="A sensory-friendly attachment that adds visual and tactile support to the shopping cart families are already using.">
-<meta name="twitter:image" content="https://quietcart.netlify.app/assets/img/og-card.jpg">
+<meta name="twitter:image" content="https://quietcart.vercel.app/assets/img/og-card.jpg">
 <link rel="preload" href="assets/fonts/jost-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/public-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -552,12 +552,10 @@
         </div>
 
         <div class="reveal">
-          <!-- Netlify Forms: the attributes below are read at deploy time. Submissions
-               appear under Forms in the Netlify dashboard. -->
+          <!-- Posts to the serverless function in api/contact.js, which emails the
+               message on. Set RESEND_API_KEY and CONTACT_TO in Vercel to enable it. -->
           <form class="form" id="contactForm" name="contact" method="POST"
-                data-netlify="true" data-netlify-honeypot="bot-field"
-                data-endpoint="/" novalidate>
-            <input type="hidden" name="form-name" value="contact">
+                action="/api/contact" data-endpoint="/api/contact" novalidate>
             <input type="hidden" name="audience" id="audienceField" value="Parent / caregiver">
             <p hidden><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
             <div class="field">

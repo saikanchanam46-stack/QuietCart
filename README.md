@@ -17,60 +17,67 @@ python3 -m http.server 8000    # then visit http://localhost:8000
 index.html              the whole page (single page, anchor navigation)
 assets/css/styles.css   design tokens + all styles
 assets/js/main.js       nav, scroll-spy, reveal-on-scroll, form validation
-assets/img/*.svg        illustrations (see "Artwork" below)
-assets/img/photos/      drop real photography here
+assets/fonts/           self-hosted Jost + Public Sans
+assets/img/*.svg        illustrations
+assets/img/photos/      photography
+api/contact.js          serverless function behind the contact form
+api/contact.test.js     its tests — node api/contact.test.js
+vercel.json             headers and caching
+tools/set-domain.sh     rewrites the site URL everywhere at once
 ```
 
 ## Deploying
 
-The site is hosted on **Netlify**, deployed straight from this repository. There is no build
-step — Netlify serves the files as they are.
+Hosted on **Vercel**, deployed straight from this repository. There is no build step — Vercel
+serves the static files and runs `api/contact.js` as a serverless function.
 
 ### First-time setup
 
-1. Sign in at [netlify.com](https://netlify.com) with your GitHub account.
-2. **Add new site → Import an existing project → GitHub**, and pick `QuietCart`.
-3. Set **Branch to deploy** to `claude/quietcart-website-5ido0y`.
-4. Leave **Build command** empty and **Publish directory** as `.` (`netlify.toml` already sets this).
-5. **Deploy**. You get a URL like `quietcart.netlify.app`, renameable under
-   *Site configuration → Change site name*.
+1. Sign in at [vercel.com](https://vercel.com) with your GitHub account.
+2. **Add New… → Project**, import `QuietCart`.
+3. Framework preset: **Other**. Leave the build command and output directory empty —
+   `vercel.json` already covers the configuration.
+4. Set the production branch to `claude/quietcart-website-5ido0y` under
+   *Settings → Git → Production Branch*.
+5. **Deploy.** You get a URL like `quietcart.vercel.app`, renameable under *Settings → Domains*.
 
-Every push to that branch redeploys automatically.
+Every push to that branch redeploys. Pull requests get their own preview URL.
 
-### The contact form
+### Turning the contact form on
 
-The form is wired to **Netlify Forms** — no backend and no third-party service. Netlify detects it
-during deploy from the `data-netlify` attribute in `index.html`.
+`api/contact.js` receives the form and emails it on through [Resend](https://resend.com)
+(free tier: 3,000 emails/month, no card).
 
-After the first deploy:
+1. Create a Resend account and an API key.
+2. In Vercel: *Settings → Environment Variables*, add
+   - `RESEND_API_KEY` — the key
+   - `CONTACT_TO` — the address that should receive messages
+   - `CONTACT_FROM` — optional. Defaults to Resend's shared testing sender, which works
+     immediately. To send from your own domain, verify it in Resend first and set this to
+     something like `QuietCart <hello@quietcart.com>`.
+3. Redeploy so the function picks the variables up.
+4. Send yourself a test message from the live site.
 
-1. Open **Forms** in the Netlify dashboard. A form named `contact` should be listed. If it is
-   missing, redeploy — detection only runs at deploy time.
-2. Under **Forms → Form notifications**, add an email notification so messages reach your inbox
-   instead of sitting in the dashboard.
-3. Send yourself a test message through the live site to confirm the path end to end.
+Until those variables exist the endpoint returns 503 and the form tells the visitor plainly that
+it is not connected yet, rather than pretending a message was sent. Replies go straight to the
+sender, because the function sets `reply_to` to their address.
 
-Submissions record name, email, organization, message, and which audience box was ticked. A hidden
-honeypot field catches most spam bots. The free tier covers 100 submissions per month.
+Run the handler's tests with `node api/contact.test.js` — no dependencies, no test runner.
 
 ### A custom domain
 
-1. Buy the domain. Cloudflare Registrar sells at cost (about $10/yr for a .com, no markup);
-   Porkbun and Namecheap are similar. Netlify sells them too, which is the least work but a few
-   dollars more.
-2. In Netlify: *Domain management → Add a domain*, enter it, and follow the DNS instructions shown.
-   Pointing your nameservers at Netlify DNS is the simplest route; otherwise add the records
-   Netlify displays at your registrar. **Use the values Netlify shows you** rather than any written
-   down elsewhere, as they change.
-3. Wait for DNS to propagate (usually minutes, up to 48 hours) and Netlify issues an HTTPS
-   certificate automatically.
+1. Buy the domain. Cloudflare Registrar sells at cost (about $10/yr for a .com); Porkbun and
+   Namecheap are similar. Vercel sells them too, which is the least work.
+2. In Vercel: *Settings → Domains*, add it, and follow the DNS instructions shown. **Use the values
+   Vercel displays**, not any written down elsewhere, as they change.
+3. HTTPS is issued automatically once DNS resolves.
 4. Point the site at it: `./tools/set-domain.sh quietcart.com`, then commit and push.
 
 ### Where the site URL lives
 
 The domain appears in the canonical link, the social preview tags, `robots.txt` and `sitemap.xml`.
 `tools/set-domain.sh` updates all of them together so they cannot drift apart. It currently reads
-`quietcart.netlify.app`.
+`quietcart.vercel.app`.
 
 After changing it, re-scrape the preview so the old card is not cached:
 [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) and the

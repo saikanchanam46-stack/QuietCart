@@ -180,24 +180,45 @@
       return;
     }
     if (!endpoint) {
-      showStatus('This form isn’t connected to an inbox yet, so nothing was sent. ' +
-                 'Add a form endpoint to data-endpoint in index.html to start receiving messages.', 'setup');
+      showStatus('This form isn\u2019t connected to an inbox yet, so nothing was sent. ' +
+                 'Set data-endpoint on the form in index.html.', 'setup');
       return;
     }
 
     button.disabled = true;
     var original = button.textContent;
-    button.textContent = 'Sending…';
+    button.textContent = 'Sending\u2026';
 
     fetch(endpoint, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Accept: 'application/json'
+      },
       body: payload
     })
       .then(function (res) {
-        if (!res.ok) throw new Error('Request failed with status ' + res.status);
-        form.reset();
-        showStatus('Thank you — your message is on its way. We’ll be in touch soon.');
+        return res.json().catch(function () { return {}; }).then(function (data) {
+          return { status: res.status, ok: res.ok, data: data };
+        });
+      })
+      .then(function (r) {
+        if (r.ok) {
+          form.reset();
+          syncAudience();
+          showStatus('Thank you \u2014 your message is on its way. We\u2019ll be in touch soon.');
+          return;
+        }
+        if (r.status === 503 && r.data.error === 'not_configured') {
+          showStatus('The contact form isn\u2019t connected to an inbox yet, so nothing was sent. ' +
+                     'Add RESEND_API_KEY and CONTACT_TO in the Vercel project settings.', 'setup');
+          return;
+        }
+        if (r.status === 400) {
+          showStatus('Some details were missing or invalid. Please check the form and try again.', 'setup');
+          return;
+        }
+        showStatus('Something went wrong sending that. Please try again in a moment.', 'setup');
       })
       .catch(function () {
         showStatus('Something went wrong sending that. Please try again in a moment.', 'setup');
