@@ -1,3 +1,30 @@
+/* Self-hosted so the page never waits on a third party, and so no visitor
+   request goes to Google. Files come from @fontsource (SIL Open Font License). */
+@font-face {
+  font-family: "Jost"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("../fonts/jost-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jost"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("../fonts/jost-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Public Sans"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/public-sans-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Public Sans"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("../fonts/public-sans-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Public Sans"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("../fonts/public-sans-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Public Sans"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/public-sans-latin-700-normal.woff2") format("woff2");
+}
+
 /* ==========================================================================
    QuietCart — site styles
    Palette: sage green, muted teal, off-white, light grey, soft dark text.

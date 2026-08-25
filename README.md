@@ -55,8 +55,26 @@ honeypot field catches most spam bots. The free tier covers 100 submissions per 
 
 ### A custom domain
 
-To use something like `quietcart.com`: buy the domain, then in Netlify go to
-*Domain management → Add a domain* and follow the DNS instructions. HTTPS is issued automatically.
+1. Buy the domain. Cloudflare Registrar sells at cost (about $10/yr for a .com, no markup);
+   Porkbun and Namecheap are similar. Netlify sells them too, which is the least work but a few
+   dollars more.
+2. In Netlify: *Domain management → Add a domain*, enter it, and follow the DNS instructions shown.
+   Pointing your nameservers at Netlify DNS is the simplest route; otherwise add the records
+   Netlify displays at your registrar. **Use the values Netlify shows you** rather than any written
+   down elsewhere, as they change.
+3. Wait for DNS to propagate (usually minutes, up to 48 hours) and Netlify issues an HTTPS
+   certificate automatically.
+4. Point the site at it: `./tools/set-domain.sh quietcart.com`, then commit and push.
+
+### Where the site URL lives
+
+The domain appears in the canonical link, the social preview tags, `robots.txt` and `sitemap.xml`.
+`tools/set-domain.sh` updates all of them together so they cannot drift apart. It currently reads
+`quietcart.netlify.app`.
+
+After changing it, re-scrape the preview so the old card is not cached:
+[LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) and the
+[Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/).
 
 ## Before this goes live
 
@@ -158,7 +176,12 @@ Skip link, semantic landmarks, labelled form fields with inline errors, visible 
 `aria-current` on the active nav item, and descriptive `alt`/`<title>` text on every illustration.
 Motion is small by default and removed entirely under `prefers-reduced-motion: reduce`.
 
+## Fonts
+
+Jost and Public Sans are self-hosted in `assets/fonts/` (woff2, ~92 KB total, from @fontsource
+under the SIL Open Font License). Nothing is fetched from Google, so the page does not wait on a
+third party and no visitor request leaves the site — worth having on a site aimed at families.
+
 ## Browser support
 
-Modern evergreen browsers. Fonts load from Google Fonts (Source Serif 4 + Inter) with system
-fallbacks, so the page still reads correctly if they fail to load.
+Modern evergreen browsers, with system font fallbacks declared throughout.
