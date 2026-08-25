@@ -1,0 +1,12 @@
+# Local scratch files used when rendering screenshots
+_review.html
+_test.html
+_t.html
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp
+
+# Only ever needed if a build step is added later
+node_modules/
