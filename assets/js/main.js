@@ -87,11 +87,21 @@
   }
 
   /* --- "Explore a Partnership" preselects the retailer option ----------- */
+  var audienceField = document.getElementById('audienceField');
+  function syncAudience() {
+    var picked = document.querySelector('input[name="audience"]:checked');
+    if (picked && audienceField) audienceField.value = picked.value;
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="audience"]'), function (r) {
+    r.addEventListener('change', syncAudience);
+  });
+  syncAudience();
+
   document.addEventListener('click', function (e) {
     var trigger = e.target.closest('[data-audience]');
     if (!trigger) return;
     var radio = document.querySelector('input[name="audience"][value*="' + trigger.dataset.audience + '" i]');
-    if (radio) radio.checked = true;
+    if (radio) { radio.checked = true; syncAudience(); }
   });
 
 
@@ -161,10 +171,14 @@
 
     var endpoint = (form.dataset.endpoint || '').trim();
     var button = form.querySelector('button[type="submit"]');
-    var audience = form.ownerDocument.querySelector('input[name="audience"]:checked');
-    var payload = new FormData(form);
-    if (audience) payload.append('audience', audience.value);
+    syncAudience();
+    var payload = new URLSearchParams(new FormData(form)).toString();
 
+    if (window.location.protocol === 'file:') {
+      showStatus('Opened straight from a file, so there is no server to send to. ' +
+                 'The form works once the site is deployed.', 'setup');
+      return;
+    }
     if (!endpoint) {
       showStatus('This form isn’t connected to an inbox yet, so nothing was sent. ' +
                  'Add a form endpoint to data-endpoint in index.html to start receiving messages.', 'setup');
@@ -175,7 +189,11 @@
     var original = button.textContent;
     button.textContent = 'Sending…';
 
-    fetch(endpoint, { method: 'POST', body: payload, headers: { Accept: 'application/json' } })
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: payload
+    })
       .then(function (res) {
         if (!res.ok) throw new Error('Request failed with status ' + res.status);
         form.reset();

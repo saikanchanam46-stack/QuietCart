@@ -21,20 +21,55 @@ assets/img/*.svg        illustrations (see "Artwork" below)
 assets/img/photos/      drop real photography here
 ```
 
+## Deploying
+
+The site is hosted on **Netlify**, deployed straight from this repository. There is no build
+step — Netlify serves the files as they are.
+
+### First-time setup
+
+1. Sign in at [netlify.com](https://netlify.com) with your GitHub account.
+2. **Add new site → Import an existing project → GitHub**, and pick `QuietCart`.
+3. Set **Branch to deploy** to `claude/quietcart-website-5ido0y`.
+4. Leave **Build command** empty and **Publish directory** as `.` (`netlify.toml` already sets this).
+5. **Deploy**. You get a URL like `quietcart.netlify.app`, renameable under
+   *Site configuration → Change site name*.
+
+Every push to that branch redeploys automatically.
+
+### The contact form
+
+The form is wired to **Netlify Forms** — no backend and no third-party service. Netlify detects it
+during deploy from the `data-netlify` attribute in `index.html`.
+
+After the first deploy:
+
+1. Open **Forms** in the Netlify dashboard. A form named `contact` should be listed. If it is
+   missing, redeploy — detection only runs at deploy time.
+2. Under **Forms → Form notifications**, add an email notification so messages reach your inbox
+   instead of sitting in the dashboard.
+3. Send yourself a test message through the live site to confirm the path end to end.
+
+Submissions record name, email, organization, message, and which audience box was ticked. A hidden
+honeypot field catches most spam bots. The free tier covers 100 submissions per month.
+
+### A custom domain
+
+To use something like `quietcart.com`: buy the domain, then in Netlify go to
+*Domain management → Add a domain* and follow the DNS instructions. HTTPS is issued automatically.
+
 ## Before this goes live
 
-Four things are deliberately unfinished. Each is marked with a `TODO` comment in the source.
+Two things are still unfinished. Both are marked with `TODO` comments in the source.
 
-1. **Connect the contact form.** `index.html` → `<form id="contactForm" data-endpoint="">`.
-   Put a form handler URL in `data-endpoint` (Formspree, Netlify Forms, your own endpoint) and
-   the form will POST to it. While it is empty, the form validates but tells the visitor plainly
-   that it is not connected rather than pretending a message was sent.
-2. **Add the real LinkedIn URL.** `index.html` → footer, `Elsewhere` list. It currently points at `#`.
+1. **Add the real LinkedIn URL.** `index.html` → footer, `Elsewhere` list. It points at `#`.
    No other social accounts are listed; don't add one until it exists.
-3. **Fill in or remove the statistic placeholders.** The Problem section has two dashed
-   `.data-slot` boxes. They are placeholders on purpose — no figure on this site is invented.
-   Replace each with a real, citable number, or delete the whole `.data-panel` block.
-4. **Swap in real photographs** as they become available (see below).
+2. **Add the founder's name** to the byline under the portrait in Our Story. It currently reads
+   just "Founder, QuietCart".
+
+Also worth deciding before launch: the two dashed statistic placeholders in the Problem section.
+They are placeholders on purpose — no figure on this site is invented. Replace each with a real,
+citable number, or delete the `.data-panel` block.
 
 ## Photographs
 

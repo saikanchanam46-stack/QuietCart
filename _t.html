@@ -635,5 +635,55 @@
 </footer>
 
 <script src="assets/js/main.js" defer></script>
-</body>
+
+<script>
+window.addEventListener('load', function () {
+  var out=[], form=document.getElementById('contactForm');
+  function log(n,p,e){out.push((p?'PASS':'FAIL')+' :: '+n+(e?' :: '+e:''));}
+
+  log('form named for Netlify', form.getAttribute('name')==='contact');
+  log('netlify attribute present', form.hasAttribute('data-netlify'));
+  log('form-name hidden field', !!form.querySelector('input[name=form-name]'));
+  log('honeypot present', !!form.querySelector('input[name=bot-field]'));
+  log('audience field inside form', !!document.getElementById('audienceField'));
+
+  // audience mirror tracks the radio the visitor picks
+  document.getElementById('aud-retailer').checked = true;
+  document.getElementById('aud-retailer').dispatchEvent(new Event('change'));
+  log('audience mirrors retailer', document.getElementById('audienceField').value.indexOf('Retailer')!==-1,
+      document.getElementById('audienceField').value);
+  document.querySelector('[data-audience]').click();
+  log('partnership CTA still syncs', document.getElementById('audienceField').value.indexOf('Retailer')!==-1);
+  document.getElementById('aud-parent').checked = true;
+  document.getElementById('aud-parent').dispatchEvent(new Event('change'));
+  log('audience mirrors parent', document.getElementById('audienceField').value.indexOf('Parent')!==-1,
+      document.getElementById('audienceField').value);
+
+  // validation must still block bad input
+  form.dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}));
+  log('empty submit blocked', document.getElementById('name-error').textContent.length>0);
+
+  // capture what a real submit would send
+  var sent=null; var realFetch=window.fetch;
+  window.fetch=function(u,o){ sent={url:u,opts:o}; return Promise.resolve({ok:true}); };
+  form.elements.name.value='Sam'; form.elements.email.value='sam@example.com';
+  form.elements.message.value='Hello there';
+  form.dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}));
+  window.fetch=realFetch;
+  setTimeout(function(){
+    if(!sent){ log('submit posts to Netlify', false, 'no fetch captured'); }
+    else {
+      log('posts to site root', sent.url==='/', sent.url);
+      log('url-encoded content type',
+          (sent.opts.headers['Content-Type']||'').indexOf('x-www-form-urlencoded')!==-1);
+      var b=sent.opts.body;
+      log('body carries form-name', b.indexOf('form-name=contact')!==-1);
+      log('body carries audience', b.indexOf('audience=')!==-1);
+      log('body carries the message', b.indexOf('Hello')!==-1);
+    }
+    var pre=document.createElement('pre'); pre.id='r'; pre.textContent=out.join('\n');
+    document.body.appendChild(pre);
+  }, 300);
+});
+</script></body>
 </html>
