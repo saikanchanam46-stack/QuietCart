@@ -103,8 +103,11 @@
           </div>
           <p class="hero__note">Designed by a student founder. Built with families in mind.</p>
         </div>
-        <div class="frame">
-          <img src="assets/img/aisle-hero.svg" width="1200" height="900" alt="A supermarket aisle lined with stocked shelves, seen from behind a shopping cart.">
+        <div class="frame frame--photo">
+          <img src="assets/img/aisle-hero.svg" width="1200" height="900"
+               data-photo="assets/img/photos/hero-store.jpg"
+               data-photo-alt="A shopping cart in a supermarket aisle."
+               alt="A supermarket aisle lined with stocked shelves, seen from behind a shopping cart.">
         </div>
       </div>
     </div>
@@ -147,8 +150,11 @@
           </ul>
         </div>
         <div>
-          <div class="frame frame--flat">
-            <img src="assets/img/aisle-quiet.svg" width="1200" height="900" alt="A long supermarket aisle with stocked shelves receding toward the back of the store.">
+          <div class="frame frame--flat frame--photo">
+            <img src="assets/img/aisle-quiet.svg" width="1200" height="900"
+                 data-photo="assets/img/photos/aisle.jpg"
+                 data-photo-alt="A busy supermarket aisle."
+                 alt="A long supermarket aisle with stocked shelves receding toward the back of the store.">
           </div>
           <p class="caption">The environment isn&rsquo;t going to change. The support a child brings into it can.</p>
         </div>
@@ -346,13 +352,20 @@
             <div class="stat"><div class="stat__num">2027</div><div class="stat__label">target year for a potential pilot</div></div>
           </div>
         </div>
-        <div>
-          <div class="frame frame--flat">
-            <!-- TODO: replace with a photograph of the actual prototype when one is available. -->
-            <img src="assets/img/prototype-bench.svg" width="900" height="512" alt="A padded prototype board with picture cards, a squeeze pad and textured strips on a cutting mat, with fabric swatches, a sketchbook and scissors nearby.">
+        <figure class="portrait">
+          <div class="frame frame--flat frame--portrait">
+            <!-- Drop founder.jpg into assets/img/photos/ and it replaces this drawing automatically. -->
+            <img src="assets/img/placeholder-portrait.svg" width="480" height="600"
+                 data-photo="assets/img/photos/founder.jpg"
+                 data-photo-alt="Portrait of the founder of QuietCart."
+                 alt="A simple line drawing standing in for a photograph of the founder.">
           </div>
-          <p class="caption">The third prototype, mid-revision.</p>
-        </div>
+          <figcaption class="byline">
+            <!-- TODO: add the founder's name above the role. -->
+            <strong>Founder, QuietCart</strong>
+            <span>Interviewing families, building prototypes, and talking to stores.</span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -366,6 +379,15 @@
         <p class="lead">A short history, honestly told. QuietCart is a working prototype in active development,
           not a finished product on a shelf.</p>
       </div>
+
+      <div class="frame frame--flat frame--wide reveal" style="margin-bottom: clamp(2.25rem, 4vw, 3rem)">
+        <!-- Drop prototype.jpg into assets/img/photos/ to show the real build here. -->
+        <img src="assets/img/prototype-bench.svg" width="900" height="512"
+             data-photo="assets/img/photos/prototype.jpg"
+             data-photo-alt="The third QuietCart prototype."
+             alt="A padded prototype board with picture cards, a squeeze pad and textured strips on a cutting mat, with fabric swatches, a sketchbook and scissors nearby.">
+      </div>
+      <p class="caption reveal" style="margin: -1.5rem 0 clamp(2.25rem, 4vw, 3rem)">The third prototype, mid-revision.</p>
 
       <div class="timeline reveal">
         <div class="tl-item tl-item--done">
@@ -465,6 +487,13 @@
           </div>
         </div>
         <div>
+          <figure class="photo-figure" data-photo-only hidden>
+            <div class="frame frame--flat frame--photo">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt=""
+                   data-photo="assets/img/photos/family-shopping.jpg"
+                   data-photo-alt="A parent and child shopping together with a cart.">
+            </div>
+          </figure>
           <div class="frame frame--flat">
             <img src="assets/img/product-board.svg" width="1000" height="690" alt="The QuietCart attachment: a padded board with a four-step visual shopping sequence, CalmCue cards on a ring, a squeeze pad and textured strips.">
           </div>

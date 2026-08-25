@@ -94,6 +94,24 @@
     if (radio) radio.checked = true;
   });
 
+
+  /* --- photographs upgrade the illustrations, when they exist ------------
+     Each slot ships with an illustration as its real src. If the matching
+     photo in assets/img/photos/ loads, it takes over. A missing photo simply
+     leaves the illustration in place, so the page never shows a broken image. */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-photo]'), function (img) {
+    var probe = new Image();
+    probe.onload = function () {
+      img.src = img.dataset.photo;
+      if (img.dataset.photoAlt) img.alt = img.dataset.photoAlt;
+      img.removeAttribute('width');
+      img.removeAttribute('height');
+      var figure = img.closest('[data-photo-only]');
+      if (figure) figure.hidden = false;
+    };
+    probe.src = img.dataset.photo;
+  });
+
   /* --- contact form ------------------------------------------------------ */
   var form = document.getElementById('contactForm');
   if (!form) return;

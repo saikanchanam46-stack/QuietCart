@@ -439,3 +439,18 @@ a:hover { color: var(--ink); }
 section[id], main [id] { scroll-margin-top: 84px; }
 .form__status--setup { border-color: var(--line-2); background: var(--paper-2); color: var(--ink-2); }
 .nav__toggle span { pointer-events: none; }
+
+/* --- photograph slots ------------------------------------------------------
+   Illustrations ship as the default; a photo dropped into assets/img/photos/
+   replaces one at runtime. Fixed ratios keep the layout steady either way. */
+.frame img { object-fit: cover; }
+.frame--photo img { aspect-ratio: 4 / 3; width: 100%; }
+.frame--wide img { aspect-ratio: 16 / 9; width: 100%; }
+.frame--portrait { max-width: 21rem; }
+.frame--portrait img { aspect-ratio: 4 / 5; width: 100%; object-position: 50% 26%; }
+
+figure { margin: 0; }
+.photo-figure { margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem); }
+.byline { margin-top: .9rem; font-size: .93rem; line-height: 1.55; max-width: 21rem; }
+.byline strong { display: block; color: var(--ink); font-weight: 600; }
+.byline span { color: var(--ink-3); }

@@ -36,30 +36,56 @@ Four things are deliberately unfinished. Each is marked with a `TODO` comment in
    Replace each with a real, citable number, or delete the whole `.data-panel` block.
 4. **Swap in real photographs** as they become available (see below).
 
-## Artwork
+## Photographs
 
-Every image is an original SVG illustration built for this site, drawn in the brand palette.
-They are vector, so they stay sharp at any size and cost very little bandwidth.
+**To add a photo, drop a file into `assets/img/photos/` with the right name. Nothing else.**
 
-They are also the first thing worth replacing. Real photographs of the actual prototype — on a
-real cart, in a real store — will do more for trust than any illustration. To swap one in:
+Each photo slot ships with an illustration as its actual `src`. On load, the page checks whether
+the matching photo exists and swaps it in if it does. A missing photo simply leaves the
+illustration in place, so the site never shows a broken image and never needs an edit to work.
 
-1. Put the photo in `assets/img/photos/`.
-2. Change the `src` on the matching `<img>` in `index.html`.
-3. Update the `alt` text to describe the photo, and keep `width`/`height` accurate so the page
-   doesn't shift while images load.
+| Filename | Where it appears | Shape | Suggested size |
+|---|---|---|---|
+| `founder.jpg` | Our Story portrait | portrait 4:5 | 1200 x 1500 |
+| `prototype.jpg` | Product Development | wide 16:9 | 1600 x 900 |
+| `hero-store.jpg` | Hero | landscape 4:3 | 1600 x 1200 |
+| `aisle.jpg` | The Problem | landscape 4:3 | 1600 x 1200 |
+| `family-shopping.jpg` | For Families | landscape 4:3 | 1600 x 1200 |
 
-Priority order, highest impact first:
+Photos are cropped to fill their slot (`object-fit: cover`), so any reasonable size works — but
+keep the subject near the middle, and keep files under roughly 400 KB so pages stay quick.
 
-| Illustration | Replace with |
-|---|---|
-| `product-on-cart.svg` | the prototype strapped to a real shopping cart |
-| `prototype-bench.svg` | the actual prototype 3 build |
-| `product-board.svg` | clean product shot of the board and card set |
-| `aisle-hero.svg` | a real grocery aisle, cart in the foreground |
-| `detail-*.svg` | close-ups of the board, cards and sensory pieces |
+`family-shopping.jpg` is the one exception: that block stays hidden until the file exists, because
+there is no illustration standing in for it.
 
-Avoid staged stock photography of children — the brief for this site is that it should look real.
+### Sourcing stock photography
+
+Free for commercial use, no attribution required:
+
+- **Unsplash** — unsplash.com
+- **Pexels** — pexels.com
+- **Burst** — burst.shopify.com
+
+Search terms that match these slots: *grocery store aisle*, *supermarket aisle*, *shopping cart*,
+*shopping trolley*, *family grocery shopping*, *parent child supermarket*.
+
+Two things to check before using one:
+
+1. **Make sure it is a photograph.** Unsplash and Pexels both host AI-generated images now. Look
+   for the giveaways — melted text on packaging, hands with wrong fingers, shelves whose products
+   repeat, lighting that comes from nowhere. A real store photo has messy, specific detail.
+2. **Be careful with recognizable people.** The Unsplash and Pexels licenses cover the photo, but
+   not the person in it. A site selling a product implies the people shown endorse it, which needs
+   a model release. Safest choices: photos where faces are turned away, cropped out, or out of
+   focus — or hire a photographer for the ones with people. This matters most for
+   `family-shopping.jpg`.
+
+### The illustrations
+
+Every other image is an original SVG built for this site, in the brand palette. They are vector,
+so they stay sharp at any size. They are also placeholders in spirit — a real photo of the actual
+prototype will do more for trust than any drawing. `prototype.jpg` and `founder.jpg` are the two
+worth adding first.
 
 ## Copy rules
 
