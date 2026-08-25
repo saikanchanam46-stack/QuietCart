@@ -60,11 +60,9 @@ To use something like `quietcart.com`: buy the domain, then in Netlify go to
 
 ## Before this goes live
 
-Two things are still unfinished. Both are marked with `TODO` comments in the source.
+One thing is still worth a look before launch.
 
-1. **Add the real LinkedIn URL.** `index.html` → footer, `Elsewhere` list. It points at `#`.
-   No other social accounts are listed; don't add one until it exists.
-2. **Check the Our Story copy.** It is written in Sai's first-person voice from the facts supplied
+1. **Check the Our Story copy.** It is written in Sai's first-person voice from the facts supplied
    so far. Correct anything that is not accurate.
 
 No figure on this site is invented. The two that appear — 50+ families interviewed, 3 prototypes
@@ -82,10 +80,10 @@ illustration in place, so the site never shows a broken image and never needs an
 | Filename | Where it appears | Shape | Suggested size | Status |
 |---|---|---|---|---|
 | `founder.jpg` | Our Story portrait | portrait 4:5 | 1200 x 1500 | **in place** |
+| `hero-store.jpg` | Hero | wide 16:9 | 1600 x 900 | **in place** |
+| `aisle.jpg` | The Problem | landscape 4:3 | 1400 x 1050 | **in place** |
 | `carts.jpg` | For Retailers | portrait 3:4 | 415 x 553 | **in place**, low resolution |
 | `prototype.jpg` | Product Development | wide 16:9 | 1600 x 900 | wanted |
-| `hero-store.jpg` | Hero | landscape 4:3 | 1600 x 1200 | wanted |
-| `aisle.jpg` | The Problem | landscape 4:3 | 1600 x 1200 | wanted |
 | `family-shopping.jpg` | For Families | landscape 4:3 | 1600 x 1200 | wanted |
 
 Photos are cropped to fill their slot (`object-fit: cover`), so any reasonable size works — but
@@ -125,14 +123,22 @@ worth adding first.
 
 ## Design
 
-The palette comes from the logo: the teal of the cart line is the primary colour, the sage of the
-leaf is a secondary accent used sparingly. Neutrals carry a slight teal bias so greys sit with the
-brand rather than reading as generic. Type is Jost for headings, echoing the geometric wordmark,
-over Public Sans for body text.
+Warm and natural rather than clinical. Off-white `#FCFBF8` is the ground, warm cream `#F7F5EF`
+alternates the sections, and very light sage `#E8EEE7` appears sparingly behind cards. Muted olive
+`#7F9A82` carries the primary buttons; a deeper olive `#4F6A55` is the text-safe version for
+eyebrows and links. Soft sage `#A8BFA8` is decorative only — icons, borders, hovers — because it is
+too light to sit under text. Headings are soft charcoal `#26332F`, body copy a muted grey-green.
 
-The illustrations were recoloured to match: neutral structure (walls, floors, shelving) shifted
-cool, while genuinely coloured things (produce, packaging, the workbench) kept their own colour, so
-the scenes still read as real places.
+Every foreground/background pair in the palette meets WCAG AA. Two are worth knowing about: the
+primary button uses near-black text on olive rather than white, which white would fail at 3.1:1,
+and the button lightens on hover instead of darkening, which keeps that contrast climbing rather
+than dropping.
+
+Type is Jost for headings, echoing the geometric wordmark, over Public Sans for body text.
+
+The illustrations are recoloured to match: neutral structure (walls, floors, shelving) sits on warm
+paper tones, while genuinely coloured things (produce, packaging, the workbench) keep their own
+colour, so the scenes still read as real places.
 
 ## Copy rules
 
